@@ -1,0 +1,55 @@
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: #191919;
+    color: white;
+}
+
+.title {
+    text-align: center;
+}
+
+.dishes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0px 20px;
+    gap: 20px;
+    margin-top: 50px;
+
+}
+
+.dish {
+    background-color: #1E1E1E;
+    padding: 20px;
+    position: relative;
+    border-radius: 5px;
+}
+
+.dish>span {
+    background-color: #FFD944;
+    font-weight: bold;
+    border-radius: 3px;
+    padding: 5px 10px;
+    color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+@media screen and (max-width:991px) and (min-width:768px) {
+    .dishes {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .dishes .dish:last-child {
+        grid-column: span 2;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .dishes {
+        grid-template-columns: 1fr;
+    }
+}
